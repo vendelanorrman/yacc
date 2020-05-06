@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: purple;
+}
+#date {
+    font-weight: bold;
+}
+.content {
+    color: palevioletred;
+}
