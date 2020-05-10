@@ -1,15 +1,29 @@
 body {
-    text-align: center;
-    background-color: lightgray;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-
+h1 {
+  color: rgb(65, 64, 64);
+  font-family: "Open Sans", sans-serif;
+  font-size: 55px;
+  margin: auto;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
 h3 {
-    color: purple;
+  color: 000000;
 }
 #date {
-    font-weight: bold;
+  font-weight: bold;
 }
 .content {
-    color: palevioletred;
+  color: 000000;
+  text-decoration: underline;
+}
+
+img {
+  padding: 0;
 }
