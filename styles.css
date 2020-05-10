@@ -19,11 +19,36 @@ h3 {
 #date {
   font-weight: bold;
 }
-.content {
-  color: 000000;
-  text-decoration: underline;
-}
 
 img {
   padding: 0;
+}
+
+.article img {
+  max-height: 500px;
+}
+
+.topnav {
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: none;
+  display: inline-block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  background-color: #e4bbc1;
+  color: black;
+}
+.topnav a.active {
+  background-color: #e4bbc1;
+  color: #000000;
 }
