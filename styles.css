@@ -98,3 +98,16 @@ img {
     margin-bottom: 20px;
   }
 }
+
+.gameContainer {
+  padding: 30px 50px;
+}
+
+.guessSubmit {
+  background-color: #c43464;
+  color: #ffffff;
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 20px;
+}
