@@ -101,6 +101,10 @@ img {
 
 .gameContainer {
   padding: 30px 50px;
+  display: block;
+}
+#form {
+  display: none;
 }
 
 .guessSubmit {

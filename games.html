@@ -18,8 +18,11 @@
       Guess a number between 1-100. You have 10 tries and the game will tell you
       if your game is too high or two low. Give it a try!
     </p>
+    <button id="button" onclick="showGame()" ;>
+      I want to try!
+    </button>
     <div class="gameContainer">
-      <div class="form">
+      <div class="form" id="form">
         <label for="guessField">Enter a guess:</label
         ><input type="text" id="guessField" class="guessField" /> <br /><br />
         <input type="submit" value="Submit guess" class="guessSubmit" />
@@ -32,6 +35,11 @@
       </div>
     </div>
     <script>
+      function showGame() {
+        document.getElementById("form").style.display = "block";
+        document.getElementById("button").style.display = "none";
+      }
+
       let rightNumber = Math.floor(Math.random() * 100) + 1;
       const guesses = document.querySelector(".guesses");
       const lastResult = document.querySelector(".lastResult");
