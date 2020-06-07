@@ -22,11 +22,16 @@ function showFikaDays(jsonFikaDays) {
   for (let i = 0; i < fikaDays.length; i++) {
     const fikaDayElement = document.createElement("div");
     const fikaDayNameElement = document.createElement("span");
+    const fikaDayDateElement = document.createElement("span");
 
     fikaDayElement.id = "fika-day-" + i;
     fikaDayNameElement.innerHTML = fikaDays[i].name;
+    fikaDayDateElement.innerHTML =
+      " - " + new Date(fikaDays[i].date).toISOString().substring(0, 10);
     fikaDayElement.appendChild(fikaDayNameElement);
+    fikaDayElement.appendChild(fikaDayDateElement);
     fikaDaysElement.appendChild(fikaDayElement);
+
     // const myH2 = document.createElement("h2");
     // myH2.textContent = heroes[i].name;
     // myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
