@@ -22,6 +22,7 @@ function showFikaDays(jsonFikaDays) {
   for (let i = 0; i < fikaDays.length; i++) {
     const fikaDayElement = document.createElement("div");
     const fikaDayNameElement = document.createElement("span");
+    fikaDayNameElement.className = "fikaName";
     const fikaDayDateElement = document.createElement("span");
 
     fikaDayElement.id = "fika-day-" + i;
