@@ -21,10 +21,13 @@ function showFikaDays(jsonFikaDays) {
   let fikaDaysElement = document.getElementById("fikaDaysContainer");
   for (let i = 0; i < fikaDays.length; i++) {
     const fikaDayElement = document.createElement("div");
-    const fikaDayNameElement = document.createElement("span");
+    const fikaDayNameElement = document.createElement("a");
+    fikaDayNameElement.setAttribute(
+      "href",
+      "http://google.com/search?q=" + fikaDays[i].name + "+recept"
+    );
     fikaDayNameElement.className = "fikaName";
     const fikaDayDateElement = document.createElement("span");
-
     fikaDayElement.id = "fika-day-" + i;
     fikaDayNameElement.innerHTML = fikaDays[i].name;
     fikaDayDateElement.innerHTML =
