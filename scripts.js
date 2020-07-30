@@ -1,8 +1,9 @@
-let todaysDate = new Date();
-
+let getTodaysDate = new Date();
+let todaysDate = getTodaysDate.toISOString().substring(0, 10);
+console.log(todaysDate);
 let dateElement = document.getElementById("date");
 
-dateElement.innerHTML = todaysDate.toISOString().substring(0, 10);
+dateElement.innerHTML = todaysDate;
 
 function myFunction() {
   let x = document.getElementById("button");
@@ -35,7 +36,10 @@ function showFikaDays(jsonFikaDays) {
     fikaDayElement.appendChild(fikaDayNameElement);
     fikaDayElement.appendChild(fikaDayDateElement);
     fikaDaysElement.appendChild(fikaDayElement);
-
+    if (fikaDays[i].date === todaysDate) {
+      let todaysFikaDay = document.getElementById("todaysFikaDay");
+      todaysFikaDay.innerHTML = "Today is: " + fikaDays[i].name;
+    }
     // const myH2 = document.createElement("h2");
     // myH2.textContent = heroes[i].name;
     // myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
