@@ -1,9 +1,10 @@
 let getTodaysDate = new Date();
-let todaysDate = getTodaysDate.toISOString().substring(0, 10);
-console.log(todaysDate);
+let todaysDateISO = getTodaysDate.toISOString().substring(0, 10);
+let todaysDateTime = getTodaysDate.getTime();
+console.log(todaysDateTime);
 let dateElement = document.getElementById("date");
 
-dateElement.innerHTML = todaysDate;
+dateElement.innerHTML = todaysDateISO;
 
 function myFunction() {
   let x = document.getElementById("button");
@@ -17,9 +18,11 @@ function myFunction() {
   }
 }
 
+let nextFikaDays = [];
 function showFikaDays(jsonFikaDays) {
   const fikaDays = jsonFikaDays["data"];
   let fikaDaysElement = document.getElementById("fikaDaysContainer");
+
   for (let i = 0; i < fikaDays.length; i++) {
     const fikaDayElement = document.createElement("div");
     const fikaDayNameElement = document.createElement("a");
@@ -31,23 +34,26 @@ function showFikaDays(jsonFikaDays) {
     const fikaDayDateElement = document.createElement("span");
     fikaDayElement.id = "fika-day-" + i;
     fikaDayNameElement.innerHTML = fikaDays[i].name;
-    fikaDayDateElement.innerHTML =
-      " - " + new Date(fikaDays[i].date).toISOString().substring(0, 10);
+    let fikaDayDate = new Date(fikaDays[i].date).toISOString().substring(0, 10);
+    fikaDayDateElement.innerHTML = " - " + fikaDayDate;
     fikaDayElement.appendChild(fikaDayNameElement);
     fikaDayElement.appendChild(fikaDayDateElement);
     fikaDaysElement.appendChild(fikaDayElement);
-    if (fikaDays[i].date === todaysDate) {
+
+    let fikaDateTime = new Date(fikaDays[i].date).getTime();
+    let dateDiff = fikaDateTime - todaysDateTime;
+
+    if (todaysDateISO === fikaDayDate) {
       let todaysFikaDay = document.getElementById("todaysFikaDay");
-      todaysFikaDay.innerHTML = "Today is: " + fikaDays[i].name;
+      todaysFikaDay.innerHTML = "Today is " + fikaDays[i].name;
     }
-    // const myH2 = document.createElement("h2");
-    // myH2.textContent = heroes[i].name;
-    // myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
-    // const superPowers = heroes[i].powers;
-    // myArticle.appendChild(myList);
-    // section.appendChild(myArticle);
+    if (dateDiff > 0) {
+      nextFikaDays.push(fikaDays[i].name);
+    }
+    nextFikaDay.innerHTML = "Next fika day is " + nextFikaDays[0];
   }
   console.log(fikaDays);
+  console.log(nextFikaDays);
 }
 
 let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
