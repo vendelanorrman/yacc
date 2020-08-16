@@ -1,10 +1,14 @@
 let getTodaysDate = new Date();
+let todaysDateFormated = getTodaysDate.toLocaleString("sv-SE", {
+  day: "numeric",
+  month: "long",
+});
 let todaysDateISO = getTodaysDate.toISOString().substring(0, 10);
 let todaysDateTime = getTodaysDate.getTime();
 console.log(todaysDateTime);
 let dateElement = document.getElementById("date");
 
-dateElement.innerHTML = todaysDateISO;
+dateElement.innerHTML = todaysDateFormated;
 
 function myFunction() {
   let x = document.getElementById("button");
@@ -26,16 +30,8 @@ function showFikaDays(jsonFikaDays) {
   for (let i = 0; i < fikaDays.length; i++) {
     const fikaDayElement = document.createElement("div");
     const fikaDayNameElement = document.createElement("a");
-    fikaDayNameElement.setAttribute(
-      "href",
-      "http://google.com/search?q=" + fikaDays[i].name + "+recept"
-    );
-    fikaDayNameElement.className = "fikaName";
     const fikaDayDateElement = document.createElement("span");
-    fikaDayElement.id = "fika-day-" + i;
-    fikaDayNameElement.innerHTML = fikaDays[i].name;
     let fikaDayDate = new Date(fikaDays[i].date).toISOString().substring(0, 10);
-    fikaDayDateElement.innerHTML = " - " + fikaDayDate;
     fikaDayElement.appendChild(fikaDayNameElement);
     fikaDayElement.appendChild(fikaDayDateElement);
     fikaDaysElement.appendChild(fikaDayElement);
@@ -45,15 +41,26 @@ function showFikaDays(jsonFikaDays) {
 
     if (todaysDateISO === fikaDayDate) {
       let todaysFikaDay = document.getElementById("todaysFikaDay");
-      todaysFikaDay.innerHTML = "Today is " + fikaDays[i].name;
+      todaysFikaDay.innerHTML = "Idag är det " + fikaDays[i].name;
     }
     if (dateDiff > 0) {
-      nextFikaDays.push(fikaDays[i].name);
+      nextFikaDays.push(fikaDays[i].name, fikaDays[i].date);
     }
-    nextFikaDay.innerHTML = "Next fika day is " + nextFikaDays[0];
+    let nextFikaDayFormatDate = new Date(nextFikaDays[1]).toLocaleString(
+      "sv-SE",
+      {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+      }
+    );
+
+    nextFikaDay.innerHTML =
+      nextFikaDayFormatDate.charAt(0).toUpperCase() +
+      nextFikaDayFormatDate.slice(1) +
+      " är det " +
+      nextFikaDays[0];
   }
-  console.log(fikaDays);
-  console.log(nextFikaDays);
 }
 
 let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";

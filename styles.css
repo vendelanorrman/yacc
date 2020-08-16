@@ -128,4 +128,9 @@ img {
 }
 #nextFikaDay {
   color: #8a4159;
+  font-size: 18px;
+}
+
+#nextFikaDayHeader {
+  font-size: 20px;
 }
