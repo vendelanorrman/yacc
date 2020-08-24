@@ -13,6 +13,31 @@ function nthDayInMonth(n, day, m) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate() + (n - 1) * 7);
 }
 
+// documentation from https://gist.github.com/johndyer/0dffbdd98c2046f41180c051f378f343
+function getEaster(year = Y) {
+  var f = Math.floor,
+    // Golden Number - 1
+    G = year % 19,
+    C = f(year / 100),
+    // related to Epact
+    H = (C - f(C / 4) - f((8 * C + 13) / 25) + 19 * G + 15) % 30,
+    // number of days from 21 March to the Paschal full moon
+    I = H - f(H / 28) * (1 - f(29 / (H + 1)) * f((21 - G) / 11)),
+    // weekday for the Paschal full moon
+    J = (year + f(year / 4) + I + 2 - C + f(C / 4)) % 7,
+    // number of days from 21 March to the Sunday on or before the Paschal full moon
+    L = I - J,
+    month = 3 + f((L + 40) / 44),
+    day = L + 28 - 31 * f(month / 4);
+
+  return new Date(year, month - 1, day);
+}
+
+//47 days after easter
+function getFettisdagen() {
+  return new Date(getEaster().setDate(getEaster().getDate() - 47));
+}
+
 let data = [
   {
     date: new Date(Y, 0, 12).toLocaleString("sv-SE").substring(0, 10),
@@ -31,7 +56,7 @@ let data = [
     name: "Geléhallonens dag",
   },
   {
-    date: new Date(Y, 02, 25).toLocaleString("sv-SE").substring(0, 10),
+    date: getFettisdagen().toLocaleString("sv-SE").substring(0, 10),
     name: "Fettisdagen",
   },
   {
