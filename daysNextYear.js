@@ -1,4 +1,4 @@
-let Y = new Date().getFullYear();
+let Y = new Date().getFullYear() + 1;
 console.log(Y);
 
 //nthDay documentation: https://www.i-programmer.info/programming/javascript/6322-date-hacks-doing-javascript-date-calculations.html?start=1
@@ -44,15 +44,15 @@ let data = [
     name: "Marsipanens dag",
   },
   {
-    date: new Date(Y, 01, 03).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 1, 3).toLocaleString("sv-SE").substring(0, 10),
     name: "Morotskakans dag",
   },
   {
-    date: new Date(Y, 01, 05).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 1, 5).toLocaleString("sv-SE").substring(0, 10),
     name: "Nutelladagen",
   },
   {
-    date: new Date(Y, 02, 15).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 2, 15).toLocaleString("sv-SE").substring(0, 10),
     name: "Geléhallonens dag",
   },
   {
@@ -60,71 +60,71 @@ let data = [
     name: "Fettisdagen",
   },
   {
-    date: new Date(Y, 03, 03).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 3).toLocaleString("sv-SE").substring(0, 10),
     name: "Mandelkubbens dag",
   },
   {
-    date: new Date(Y, 03, 07).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 7).toLocaleString("sv-SE").substring(0, 10),
     name: "Punschrullens dag",
   },
   {
-    date: new Date(Y, 03, 13).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 13).toLocaleString("sv-SE").substring(0, 10),
     name: "Mazarindagen",
   },
   {
-    date: new Date(Y, 03, 25).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 25).toLocaleString("sv-SE").substring(0, 10),
     name: "Våffeldagen",
   },
   {
-    date: new Date(Y, 03, nthDay(03, 2, 6))
+    date: new Date(Y, 3, nthDay(3, 2, 6))
       .toLocaleString("sv-SE")
       .substring(0, 10),
     name: "Surdegsdagen",
   },
   {
-    date: new Date(Y, 04, 12).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 12).toLocaleString("sv-SE").substring(0, 10),
     name: "Lakritsdagen",
   },
   {
-    date: new Date(Y, 04, 20).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 20).toLocaleString("sv-SE").substring(0, 10),
     name: "Polkagrisens dag",
   },
   {
-    date: new Date(Y, 05, 01).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 5, 1).toLocaleString("sv-SE").substring(0, 10),
     name: "Budapestbakelsens dag",
   },
   {
-    date: new Date(Y, 05, 11).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 5, 11).toLocaleString("sv-SE").substring(0, 10),
     name: "Chokladbollens dag",
   },
   {
-    date: new Date(Y, 04, nthDay(04, 2, 3))
+    date: new Date(Y, 4, nthDay(4, 2, 3))
       .toLocaleString("sv-SE")
       .substring(0, 10),
     name: "Syltkakans dag",
   },
   {
-    date: new Date(Y, 05, 15).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 5, 15).toLocaleString("sv-SE").substring(0, 10),
     name: "Kardemummabullens dag",
   },
   {
-    date: new Date(Y, 05, 27).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 5, 27).toLocaleString("sv-SE").substring(0, 10),
     name: "Muffinsdagen",
   },
   {
-    date: new Date(Y, 08, 09).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 8, 9).toLocaleString("sv-SE").substring(0, 10),
     name: "Rulltårtans dag",
   },
   {
-    date: new Date(Y, 09, 29).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 9, 29).toLocaleString("sv-SE").substring(0, 10),
     name: "Kaffedagen",
   },
   {
-    date: new Date(Y, 10, 04).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 4).toLocaleString("sv-SE").substring(0, 10),
     name: "Kanelbullens dag",
   },
   {
-    date: new Date(Y, 09, nthDay(09, 1, 0))
+    date: new Date(Y, 9, nthDay(9, 1, 0))
       .toLocaleString("sv-SE")
       .substring(0, 10),
     name: "Gräddtårtans dag",
@@ -162,7 +162,7 @@ let data = [
     name: "Wienerbrödets dag",
   },
   {
-    date: new Date(Y, 12, 09).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 12, 9).toLocaleString("sv-SE").substring(0, 10),
     name: "Pepparkakans dag",
   },
   {
@@ -175,3 +175,46 @@ let data = [
   },
 ];
 console.log(data);
+
+document.getElementById("thisYear").innerHTML = "Fikadagar " + (Y - 1);
+document.getElementById("nextYear").innerHTML = "Fikadagar " + Y;
+document.getElementById("nextYearHeader").innerHTML = "Svenska Fikadagar " + Y;
+
+function showFikaDays() {
+  const fikaDays = data;
+  let fikaDaysElement = document.getElementById("fikaDaysContainer");
+
+  for (let i = 0; i < fikaDays.length; i++) {
+    const fikaDayElement = document.createElement("div");
+    const fikaDayNameElement = document.createElement("a");
+    fikaDayNameElement.setAttribute(
+      "href",
+      "http://google.com/search?q=" + fikaDays[i].name + "+recept"
+    );
+    fikaDayNameElement.className = "fikaName";
+    const fikaDayDateElement = document.createElement("span");
+    fikaDayElement.id = "fika-day-" + i;
+    fikaDayNameElement.innerHTML = fikaDays[i].name;
+    let fikaDayDate = new Date(fikaDays[i].date).toISOString().substring(0, 10);
+    fikaDayDateElement.innerHTML = " - " + fikaDayDate;
+    fikaDayElement.appendChild(fikaDayNameElement);
+    fikaDayElement.appendChild(fikaDayDateElement);
+    fikaDaysElement.appendChild(fikaDayElement);
+  }
+}
+
+// let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
+// let request = new XMLHttpRequest();
+// request.open("GET", requestURL);
+// request.responseType = "json";
+// request.send();
+// // console.log(request.response);
+
+// request.onload = function () {
+//   const fikaDays = request.response;
+//   console.log(fikaDays);
+//   showFikaDays(fikaDays);
+// };
+
+//console.log(data);
+console.log(showFikaDays());

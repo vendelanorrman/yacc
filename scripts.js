@@ -1,3 +1,10 @@
+import { data } from "/daysThisYear.js";
+
+let Y = new Date().getFullYear();
+
+document.getElementById("thisYear").innerHTML = "Fikadagar " + Y;
+document.getElementById("nextYear").innerHTML = "Fikadagar " + (Y + 1);
+
 let getTodaysDate = new Date();
 let todaysDateFormated = getTodaysDate.toLocaleString("sv-SE", {
   day: "numeric",
@@ -23,8 +30,8 @@ function myFunction() {
 }
 
 let nextFikaDays = [];
-function showFikaDays(jsonFikaDays) {
-  const fikaDays = jsonFikaDays["data"];
+function showFikaDays() {
+  const fikaDays = data;
   let fikaDaysElement = document.getElementById("fikaDaysContainer");
 
   for (let i = 0; i < fikaDays.length; i++) {
@@ -62,16 +69,16 @@ function showFikaDays(jsonFikaDays) {
       nextFikaDays[0];
   }
 }
-
-let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
-let request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
+// let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
+// let request = new XMLHttpRequest();
+// request.open("GET", requestURL);
+// request.responseType = "json";
+// request.send();
 // console.log(request.response);
 
-request.onload = function () {
-  const fikaDays = request.response;
-  console.log(fikaDays);
-  showFikaDays(fikaDays);
-};
+// request.onload = function () {
+//   const fikaDays = request.response;
+//   console.log(fikaDays);
+//   showFikaDays(fikaDays);
+// };
+console.log(showFikaDays());
