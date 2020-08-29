@@ -1,5 +1,5 @@
 let Y = new Date().getFullYear() + 1;
-console.log(Y);
+//console.log(Y);
 
 //nthDay documentation: https://www.i-programmer.info/programming/javascript/6322-date-hacks-doing-javascript-date-calculations.html?start=1
 const nthDay = (month, nthDay, weekday) =>
@@ -174,7 +174,7 @@ let data = [
     name: "Skumtomtens dag",
   },
 ];
-console.log(data);
+//console.log(data);
 
 document.getElementById("thisYear").innerHTML = "Fikadagar " + (Y - 1);
 document.getElementById("nextYear").innerHTML = "Fikadagar " + Y;
@@ -217,4 +217,4 @@ function showFikaDays() {
 // };
 
 //console.log(data);
-console.log(showFikaDays());
+showFikaDays();

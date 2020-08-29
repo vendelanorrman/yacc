@@ -12,7 +12,7 @@ let todaysDateFormated = getTodaysDate.toLocaleString("sv-SE", {
 });
 let todaysDateISO = getTodaysDate.toISOString().substring(0, 10);
 let todaysDateTime = getTodaysDate.getTime();
-console.log(todaysDateTime);
+//console.log(todaysDateTime);
 let dateElement = document.getElementById("date");
 
 dateElement.innerHTML = todaysDateFormated;
@@ -81,4 +81,4 @@ function showFikaDays() {
 //   console.log(fikaDays);
 //   showFikaDays(fikaDays);
 // };
-console.log(showFikaDays());
+showFikaDays();

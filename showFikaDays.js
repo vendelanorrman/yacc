@@ -43,4 +43,4 @@ function showFikaDays() {
 // };
 
 //console.log(data);
-console.log(showFikaDays());
+showFikaDays();

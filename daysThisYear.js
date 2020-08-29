@@ -1,5 +1,5 @@
 let Y = new Date().getFullYear();
-console.log(Y);
+//console.log(Y);
 
 //nthDay documentation: https://www.i-programmer.info/programming/javascript/6322-date-hacks-doing-javascript-date-calculations.html?start=1
 const nthDay = (month, nthDay, weekday) =>
@@ -174,6 +174,6 @@ let data = [
     name: "Skumtomtens dag",
   },
 ];
-console.log(data);
+//console.log(data);
 
 export { data };
