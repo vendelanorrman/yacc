@@ -17,7 +17,7 @@ let dateElement = document.getElementById("date");
 
 dateElement.innerHTML = todaysDateFormated;
 
-function myFunction() {
+document.getElementById("button").onclick = function myFunction() {
   let x = document.getElementById("button");
   let y = document.getElementById("cake");
   if (x.innerHTML === "Light the candles!") {
@@ -27,7 +27,7 @@ function myFunction() {
     x.innerHTML = "Light the candles!";
     y.src = "images/cake-icon-off.png";
   }
-}
+};
 
 let nextFikaDays = [];
 function showFikaDays() {
