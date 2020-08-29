@@ -52,7 +52,7 @@ let data = [
     name: "Nutelladagen",
   },
   {
-    date: new Date(Y, 2, 15).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 1, 15).toLocaleString("sv-SE").substring(0, 10),
     name: "Geléhallonens dag",
   },
   {
@@ -60,19 +60,19 @@ let data = [
     name: "Fettisdagen",
   },
   {
-    date: new Date(Y, 3, 3).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 2, 3).toLocaleString("sv-SE").substring(0, 10),
     name: "Mandelkubbens dag",
   },
   {
-    date: new Date(Y, 3, 7).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 2, 7).toLocaleString("sv-SE").substring(0, 10),
     name: "Punschrullens dag",
   },
   {
-    date: new Date(Y, 3, 13).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 2, 13).toLocaleString("sv-SE").substring(0, 10),
     name: "Mazarindagen",
   },
   {
-    date: new Date(Y, 3, 25).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 2, 25).toLocaleString("sv-SE").substring(0, 10),
     name: "Våffeldagen",
   },
   {
@@ -82,19 +82,19 @@ let data = [
     name: "Surdegsdagen",
   },
   {
-    date: new Date(Y, 4, 12).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 12).toLocaleString("sv-SE").substring(0, 10),
     name: "Lakritsdagen",
   },
   {
-    date: new Date(Y, 4, 20).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 3, 20).toLocaleString("sv-SE").substring(0, 10),
     name: "Polkagrisens dag",
   },
   {
-    date: new Date(Y, 5, 1).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 1).toLocaleString("sv-SE").substring(0, 10),
     name: "Budapestbakelsens dag",
   },
   {
-    date: new Date(Y, 5, 11).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 11).toLocaleString("sv-SE").substring(0, 10),
     name: "Chokladbollens dag",
   },
   {
@@ -104,24 +104,20 @@ let data = [
     name: "Syltkakans dag",
   },
   {
-    date: new Date(Y, 5, 15).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 15).toLocaleString("sv-SE").substring(0, 10),
     name: "Kardemummabullens dag",
   },
   {
-    date: new Date(Y, 5, 27).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 4, 27).toLocaleString("sv-SE").substring(0, 10),
     name: "Muffinsdagen",
   },
   {
-    date: new Date(Y, 8, 9).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 7, 9).toLocaleString("sv-SE").substring(0, 10),
     name: "Rulltårtans dag",
   },
   {
-    date: new Date(Y, 9, 29).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 8, 29).toLocaleString("sv-SE").substring(0, 10),
     name: "Kaffedagen",
-  },
-  {
-    date: new Date(Y, 10, 4).toLocaleString("sv-SE").substring(0, 10),
-    name: "Kanelbullens dag",
   },
   {
     date: new Date(Y, 9, nthDay(9, 1, 0))
@@ -130,47 +126,51 @@ let data = [
     name: "Gräddtårtans dag",
   },
   {
-    date: new Date(Y, 10, 11).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 9, 4).toLocaleString("sv-SE").substring(0, 10),
+    name: "Kanelbullens dag",
+  },
+  {
+    date: new Date(Y, 9, 11).toLocaleString("sv-SE").substring(0, 10),
     name: "Äppelmustens dag",
   },
   {
-    date: new Date(Y, 10, 14).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 9, 14).toLocaleString("sv-SE").substring(0, 10),
     name: "Räkmackans dag",
   },
   {
-    date: new Date(Y, 10, 18).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 9, 18).toLocaleString("sv-SE").substring(0, 10),
     name: "Chokladmuffinsens dag",
   },
   {
-    date: new Date(Y, 11, 17).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 7).toLocaleString("sv-SE").substring(0, 10),
     name: "Kladdkakans dag",
   },
   {
-    date: new Date(Y, 11, 11).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 11).toLocaleString("sv-SE").substring(0, 10),
     name: "Chokladens dag",
   },
   {
-    date: new Date(Y, 11, 13).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 13).toLocaleString("sv-SE").substring(0, 10),
     name: "Smörgåstårtans dag",
   },
   {
-    date: new Date(Y, 11, 14).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 14).toLocaleString("sv-SE").substring(0, 10),
     name: "Ostkakans dag",
   },
   {
-    date: new Date(Y, 11, 22).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 10, 22).toLocaleString("sv-SE").substring(0, 10),
     name: "Wienerbrödets dag",
   },
   {
-    date: new Date(Y, 12, 9).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 11, 9).toLocaleString("sv-SE").substring(0, 10),
     name: "Pepparkakans dag",
   },
   {
-    date: new Date(Y, 12, 18).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 11, 18).toLocaleString("sv-SE").substring(0, 10),
     name: "Kakans dag",
   },
   {
-    date: new Date(Y, 12, 21).toLocaleString("sv-SE").substring(0, 10),
+    date: new Date(Y, 11, 21).toLocaleString("sv-SE").substring(0, 10),
     name: "Skumtomtens dag",
   },
 ];
