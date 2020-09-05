@@ -20,11 +20,11 @@ dateElement.innerHTML = todaysDateFormated;
 document.getElementById("button").onclick = function myFunction() {
   let x = document.getElementById("button");
   let y = document.getElementById("cake");
-  if (x.innerHTML === "Light the candles!") {
-    x.innerHTML = "Blow out candles";
+  if (x.innerHTML === "Tänd ljusen!") {
+    x.innerHTML = "Släck ljusen";
     y.src = "images/cake-icon.png";
   } else {
-    x.innerHTML = "Light the candles!";
+    x.innerHTML = "Tänd ljusen!";
     y.src = "images/cake-icon-off.png";
   }
 };
