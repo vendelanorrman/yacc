@@ -134,3 +134,44 @@ img {
 #nextFikaDayHeader {
   font-size: 20px;
 }
+
+.recipeImage {
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.recipeBody {
+  text-align: left;
+  width: 600px;
+  margin: auto;
+}
+
+.ingredienser {
+  text-align: left;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+li::before {
+  content: counter(li);
+  color: #8a4159;
+  display: inline-block;
+  width: 0.8em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+  font-weight: bold;
+  font-size: 20px;
+}
+li {
+  counter-increment: li;
+}
