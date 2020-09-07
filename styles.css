@@ -96,32 +96,6 @@ img {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-  .articles {
-    width: 100%;
-    display: block;
-    padding: 10px 10px;
-    margin-bottom: 20px;
-  }
-}
-
-.gameContainer {
-  padding: 30px 50px;
-  display: block;
-}
-#form {
-  display: none;
-}
-
-.guessSubmit {
-  background-color: #c43464;
-  color: #ffffff;
-  padding: 5px 5px;
-  text-align: center;
-  font-size: 12px;
-  border-radius: 20px;
-}
-
 #fikaDaysContainer {
   color: #b4b1b4;
 }
@@ -180,4 +154,28 @@ li::before {
 }
 li {
   counter-increment: li;
+}
+
+@media screen and (max-width: 600px) {
+  .articles {
+    width: 100%;
+    padding: 10px 50px;
+    margin-bottom: 10px;
+  }
+  .header {
+    width: auto;
+    height: 100px;
+  }
+  h1 {
+    color: rgb(65, 64, 64);
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+  }
+  .topnav a {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+  #cake {
+    width: 300px;
+  }
 }
