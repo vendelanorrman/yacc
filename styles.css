@@ -163,8 +163,8 @@ li {
     margin-bottom: 10px;
   }
   .header {
-    width: auto;
-    height: 100px;
+    width: 300px;
+    height: auto;
   }
   h1 {
     color: rgb(65, 64, 64);
