@@ -190,7 +190,7 @@ function showFikaDays() {
     const fikaDayNameElement = document.createElement("a");
     fikaDayNameElement.setAttribute(
       "href",
-      "http://google.com/search?q=" + fikaDays[i].name + "+recept"
+      "/om dagarna/" + fikaDays[i].name + ".html"
     );
     fikaDayNameElement.className = "fikaName";
     const fikaDayDateElement = document.createElement("span");
