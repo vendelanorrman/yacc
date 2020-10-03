@@ -30,6 +30,7 @@ document.getElementById("button").onclick = function myFunction() {
 };
 
 let nextFikaDays = [];
+let todaysFikaDays = [];
 function showFikaDays() {
   const fikaDays = data;
   let fikaDaysElement = document.getElementById("fikaDaysContainer");
@@ -47,9 +48,14 @@ function showFikaDays() {
     let dateDiff = fikaDateTime - todaysDateTime;
 
     if (todaysDateISO === fikaDayDate) {
+      todaysFikaDays.push(fikaDays[i].name);
       let todaysFikaDay = document.getElementById("todaysFikaDay");
-      todaysFikaDay.innerHTML = "Idag är det " + fikaDays[i].name;
+      todaysFikaDay.innerHTML = "Idag är det " + todaysFikaDays[0];
+      if (todaysFikaDays.length > 1) {
+        todaysFikaDay.innerHTML += " och " + todaysFikaDays[1];
+      }
     }
+
     if (dateDiff > 0) {
       nextFikaDays.push(fikaDays[i].name, fikaDays[i].date);
     }
@@ -67,6 +73,16 @@ function showFikaDays() {
       nextFikaDayFormatDate.slice(1) +
       " är det " +
       nextFikaDays[0];
+
+    if (nextFikaDays[1] === nextFikaDays[3]) {
+      nextFikaDay.innerHTML =
+        nextFikaDayFormatDate.charAt(0).toUpperCase() +
+        nextFikaDayFormatDate.slice(1) +
+        " är det " +
+        nextFikaDays[0] +
+        " och " +
+        nextFikaDays[2];
+    }
   }
 }
 // let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
