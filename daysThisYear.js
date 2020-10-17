@@ -174,6 +174,5 @@ let data = [
     name: "Skumtomtens dag",
   },
 ];
-//console.log(data);
 
 export { data };

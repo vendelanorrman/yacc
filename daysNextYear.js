@@ -175,7 +175,6 @@ let data = [
     name: "Skumtomtens dag",
   },
 ];
-//console.log(data);
 
 document.getElementById("thisYear").innerHTML = "Fikadagar " + (Y - 1);
 document.getElementById("nextYear").innerHTML = "Fikadagar " + Y;
@@ -204,18 +203,4 @@ function showFikaDays() {
   }
 }
 
-// let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
-// let request = new XMLHttpRequest();
-// request.open("GET", requestURL);
-// request.responseType = "json";
-// request.send();
-// // console.log(request.response);
-
-// request.onload = function () {
-//   const fikaDays = request.response;
-//   console.log(fikaDays);
-//   showFikaDays(fikaDays);
-// };
-
-//console.log(data);
 showFikaDays();

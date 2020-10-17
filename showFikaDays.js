@@ -29,18 +29,4 @@ function showFikaDays() {
   }
 }
 
-// let requestURL = "https://diydata.dev/api/swedishfikadays/2020/";
-// let request = new XMLHttpRequest();
-// request.open("GET", requestURL);
-// request.responseType = "json";
-// request.send();
-// // console.log(request.response);
-
-// request.onload = function () {
-//   const fikaDays = request.response;
-//   console.log(fikaDays);
-//   showFikaDays(fikaDays);
-// };
-
-//console.log(data);
 showFikaDays();
