@@ -102,15 +102,15 @@ img {
 }
 #todaysFikaDay {
   color: #8a4159;
-  font-size: 24px;
+  font-size: 20px;
 }
 #nextFikaDay {
   color: #8a4159;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #nextFikaDayHeader {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .omImage {
