@@ -36,7 +36,12 @@
 .right {
   width: 25%;
   background-color: #f0f0f0;
+  margin-top: 20px;
 }
+.right div {
+  padding: 0px 10px;
+}
+
 body {
   text-align: center;
   background-color: #ffffff;
@@ -100,6 +105,8 @@ img {
 
 .row {
   margin: 10px 0px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .row:after {
@@ -167,21 +174,52 @@ img {
   color: #8a4159;
   font-weight: bold;
 }
+@media screen and (max-width: 1000px) {
+  .articles {
+    width: 33.33%;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+  }
+  .header {
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .articles {
+    width: 50%;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+  }
+  .header {
+    max-height: 150px;
+  }
+  .omImage {
+    max-width: 600px;
+  }
+  .omBody {
+    width: 550px;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .articles {
     width: 100%;
-    padding: 10px 50px;
-    margin-bottom: 10px;
+    padding: 10px 10px;
+    margin-bottom: 0px;
   }
+
   .header {
-    width: 300px;
-    height: auto;
+    max-height: 100px;
   }
   h1 {
-    color: rgb(65, 64, 64);
-    font-family: "Open Sans", sans-serif;
     font-size: 25px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 18px;
   }
   .topnav a {
     padding: 5px 5px;
@@ -198,11 +236,18 @@ img {
   .left {
     width: 100%;
   }
+
   .right {
     width: 100%;
     background-color: #ffffff;
   }
   #nextFikaDayHeader {
     padding-top: 0px;
+  }
+  .omImage {
+    max-width: 400px;
+  }
+  .omBody {
+    width: 350px;
   }
 }
