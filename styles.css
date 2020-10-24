@@ -6,7 +6,7 @@
 .topnav a {
   float: none;
   display: inline-block;
-  color: #000000;
+  color: #212121;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -26,26 +26,52 @@
   width: auto;
   height: 250px;
 }
+.column {
+  float: left;
+  height: auto;
+}
+.left {
+  width: 75%;
+}
+.right {
+  width: 25%;
+  background-color: #f0f0f0;
+}
 body {
   text-align: center;
   background-color: #ffffff;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
+  color: #212121;
 }
-h1 {
-  color: rgb(65, 64, 64);
-  font-family: "Open Sans", sans-serif;
-  font-size: 55px;
+.om {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  max-width: 250px;
   margin: auto;
 }
+h1 {
+  color: #212121;
+  font-family: "EB Garamond", serif;
+  font-size: 55px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.header {
+  padding-bottom: 20px;
+}
 a {
-  color: #000000;
+  color: #212121;
   text-decoration: none;
 }
 h3 {
-  color: 000000;
+  color: #212121;
+  font-size: 24px;
 }
 h2 {
   font-size: 20px;
+  text-align: center;
+  color: #212121;
 }
 #date {
   font-weight: bold;
@@ -73,7 +99,7 @@ img {
 }
 
 .row {
-  margin: 10px 10px;
+  margin: 10px 0px;
 }
 
 .row:after {
@@ -101,16 +127,27 @@ img {
   color: #d45b83;
 }
 #todaysFikaDay {
-  color: #8a4159;
+  color: #212121;
   font-size: 20px;
+}
+#todaysFikaDay a {
+  color: #8a4159;
+  font-weight: bold;
+}
+#todaysFikaDay img {
+  width: 75%;
+  height: auto;
 }
 #nextFikaDay {
   color: #8a4159;
   font-size: 18px;
+  margin: 0px 30px;
+  text-align: center;
 }
 
 #nextFikaDayHeader {
   font-size: 18px;
+  padding-top: 10px;
 }
 
 .omImage {
@@ -152,5 +189,20 @@ img {
   }
   #cake {
     width: 300px;
+  }
+
+  .column {
+    float: left;
+    height: auto;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    background-color: #ffffff;
+  }
+  #nextFikaDayHeader {
+    padding-top: 0px;
   }
 }

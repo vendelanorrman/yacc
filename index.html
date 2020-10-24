@@ -10,27 +10,47 @@
 
   <body>
     <h1>Svenska Fikadagar</h1>
-    <img class="header" src="images/fikaborder2.png" />
+    <img class="header" src="images/fikaborder.png" />
     <div class="topnav">
       <a href="index.html" class="active">Home</a>
       <a id="thisYear" href="fikaDays.html"></a>
       <a id="nextYear" href="fikaDaysNextYear.html"></a>
       <a href="om dagarna.html">Om Dagarna</a>
     </div>
-    <div>
-    </br><h2>Välkommen till sidan för Svenska Fikadagar!</h2>
-      <br />
-      <p id="todaysFikaDay"></p></br>
-      <p id="nextFikaDayHeader"><b>Nästa Fikadag:</b></p>
-      <p id="nextFikaDay"></p>
-      <p>Idag är det den <span id="date"></span></p>
-    </div>
-    <img id="cake" src="images/cake-icon-off.png" />
-    <br />
-    <button id="button">Tänd ljusen!</button>
-    <br /><br />
-    <div>
-      <p id="fikaDaysContainer"></p>
-    </div>
+
+    <div class="row">
+      <div class="left column">
+            <h3>Välkommen till Sidan för Svenska Fikadagar!</h3>
+
+        <p id="todaysFikaDay"><img class="header" src="images/kanelbullens dag.jpg" /></p>
+        
+       
+        
+      </div>
+
+      <div class="right column">
+        <div>
+          
+          <p id="nextFikaDayHeader"><h2>Nästa Fikadag:</h2></p>
+          <p id="nextFikaDay"></p>
+          <p>Idag är det den <span id="date"></span></p>
+        </div>
+        <div class="om">
+          <br>
+              <p><h2>Om Sidan</h2></p>
+              <p>Vill du veta när vi firar de olika fikadagarna i Sverige så har du kommit rätt!
+                Här har jag samlat fakta om varje dag, när den firas och hur det började, om det finns dokumenterat.
+                Ibland har en privatperson infört fikadagen för att uppmärksamma sin favoritbakelse och ibland har dagen en längre historia.
+                <br><br>Hoppas du uppskattar denna sida!
+                <br>Kanske kan du få lite inspiration inför dagens fikastund.
+              </p>
+            </div>
+      </div> 
+ 
+      <div>
+          <p id="fikaDaysContainer"></p>
+        </div>
+        
+    </div>  
   </body>
 </html>

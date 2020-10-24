@@ -12,22 +12,11 @@ let todaysDateFormated = getTodaysDate.toLocaleString("sv-SE", {
 });
 let todaysDateISO = getTodaysDate.toISOString().substring(0, 10);
 let todaysDateTime = getTodaysDate.getTime();
-//console.log(todaysDateTime);
+console.log(todaysDateISO);
+console.log(todaysDateTime);
 let dateElement = document.getElementById("date");
 
 dateElement.innerHTML = todaysDateFormated;
-
-document.getElementById("button").onclick = function myFunction() {
-  let x = document.getElementById("button");
-  let y = document.getElementById("cake");
-  if (x.innerHTML === "Tänd ljusen!") {
-    x.innerHTML = "Släck ljusen";
-    y.src = "images/cake-icon.png";
-  } else {
-    x.innerHTML = "Tänd ljusen!";
-    y.src = "images/cake-icon-off.png";
-  }
-};
 
 let nextFikaDays = [];
 let todaysFikaDays = [];
@@ -50,7 +39,17 @@ function showFikaDays() {
     if (todaysDateISO === fikaDayDate) {
       todaysFikaDays.push(fikaDays[i].name);
       let todaysFikaDay = document.getElementById("todaysFikaDay");
-      todaysFikaDay.innerHTML = "Idag är det " + todaysFikaDays[0];
+      todaysFikaDay.innerHTML =
+        "Idag är det " +
+        '<a href="om%20dagarna/' +
+        todaysFikaDays[0] +
+        '.html"' +
+        ">" +
+        todaysFikaDays[0] +
+        "</a>" +
+        '<br><br><img src="images/' +
+        todaysFikaDays[0] +
+        '.jpg">';
       if (todaysFikaDays.length > 1) {
         todaysFikaDay.innerHTML += " och " + todaysFikaDays[1];
       }
@@ -87,3 +86,5 @@ function showFikaDays() {
 }
 
 showFikaDays();
+
+console.log(todaysFikaDays);
