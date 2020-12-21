@@ -17,7 +17,7 @@ let dateElement = document.getElementById("date");
 
 dateElement.innerHTML = todaysDateFormated;
 
-let nextFikaDays = [];
+let nextFikaDays = ["Marsipanens dag", "2021-01-12"];
 let todaysFikaDays = [];
 function showFikaDays() {
   const fikaDays = data;
